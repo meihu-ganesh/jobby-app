@@ -81,14 +81,14 @@ class Jobs extends Component {
     if (response.ok === true) {
       const data = await response.json()
       const updatedJobsData = data.jobs.map(eachJob => ({
-        companyLogoUrl: data.company_logo_url,
-        employmentType: data.employment_type,
-        id: data.id,
-        jobDescription: data.job_description,
-        location: data.location,
-        rating: data.rating,
-        title: data.title,
-        packagePerAnnum: data.package_per_annum,
+        companyLogoUrl: eachJob.company_logo_url,
+        employmentType: eachJob.employment_type,
+        id: eachJob.id,
+        jobDescription: eachJob.job_description,
+        location: eachJob.location,
+        rating: eachJob.rating,
+        title: eachJob.title,
+        packagePerAnnum: eachJob.package_per_annum,
       }))
       this.setState({
         jobsList: updatedJobsData,

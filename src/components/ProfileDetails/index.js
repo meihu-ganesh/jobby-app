@@ -25,7 +25,7 @@ class ProfileDetails extends Component {
     const token = Cookies.get('jwt_token')
     const apiUrl = 'https://apis.ccbp.in/profile'
     const options = {
-      header: {
+      headers: {
         Authorization: `Bearer ${token}`,
       },
       method: 'GET',
