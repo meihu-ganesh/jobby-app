@@ -90,7 +90,7 @@ class Jobs extends Component {
         title: data.title,
         packagePerAnnum: data.package_per_annum,
       }))
-      this.state({
+      this.setState({
         jobsList: updatedJobsData,
         apiStatus: apiStatusConstants.success,
       })
